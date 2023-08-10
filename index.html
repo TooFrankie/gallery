@@ -6,6 +6,31 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="images/icon.png">
+		<style>
+			/* Dark mode styles */
+			[data-theme="dark"] {
+				background-color: 	#252526;
+				color: #787878;
+			}
+
+			[data-theme="dark"] a {
+				color: #fff;
+			}
+		</style>
+		
+		<script>
+			function toggleDarkMode() {
+				const body = document.body;
+				const currentTheme = body.getAttribute('data-theme');
+		
+				// Toggle theme
+				if (currentTheme === 'dark') {
+				body.removeAttribute('data-theme');
+				} else {
+				body.setAttribute('data-theme', 'dark');
+				}
+			}
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -99,6 +124,7 @@
 					<ul class="icons">
 						<li><a href="https://www.facebook.com/too.frankie.7" target="_blank" class="icon brands fa-facebook"><span class="label">Facebook</span></a></li>
 						<li><a href="https://www.instagram.com/frankie_205/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a title="Dark Mode" class="icon solid fa-moon" onclick="toggleDarkMode()"><span class="label">Dark Mode</span></a></li>
 					</ul>
 <!-- 					<ul class="copyright">
 						<li>&copy; Herdan</li><li>Design: Mustafa Saleh</li>
